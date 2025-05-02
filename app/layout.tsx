@@ -1,6 +1,8 @@
 // app/layout.tsx
+import { Navbar } from "@/components/Navbar";
 import "./globals.css";
 import { ReactNode } from "react";
+import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "Ewake Landing",
@@ -10,7 +12,11 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
