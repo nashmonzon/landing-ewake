@@ -1,3 +1,4 @@
+import { Phone } from "lucide-react";
 const TenYears = () => {
   return (
     <section className="bg-black text-white pb-20 px-4">
@@ -45,18 +46,15 @@ const TenYears = () => {
             l’Industry.
           </p>
 
-          <button className="inline-flex items-center bg-green-400 text-black px-5 py-2 rounded-full text-base font-semibold hover:bg-green-300 transition">
-            Contattaci
-            <svg
-              className="w-5 h-5 ml-2"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-            >
-              <path d="M15 10l4.553-4.553a1 1 0 011.414 0l1.586 1.586a1 1 0 010 1.414L18 13M9 21v-6a3 3 0 013-3h6" />
-            </svg>
-          </button>
+          <div className="flex items-center gap-2 mt-4">
+            <button className="inline-flex items-center bg-green-400 text-black px-6 py-2 rounded-full text-base font-medium hover:bg-green-300 transition">
+              Contattaci
+            </button>
+
+            <div className="w-10 h-10 rounded-full bg-green-400 flex items-center justify-center hover:bg-green-300 transition">
+              <Phone className="text-black w-5 h-5" />
+            </div>
+          </div>
         </div>
       </div>
       <div className="max-w-6xl mx-auto">
