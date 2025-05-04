@@ -1,8 +1,9 @@
 // app/layout.tsx
-import { Navbar } from "@/components/Navbar";
+
 import "./globals.css";
 import { ReactNode } from "react";
-import Footer from "@/components/Footer";
+import Footer from "@/components/layout/Footer";
+import Navbar from "@/components/layout/Navbar";
 
 export const metadata = {
   title: "Ewake Landing",
