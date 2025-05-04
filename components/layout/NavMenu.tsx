@@ -7,31 +7,37 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 
 const NavMenu = () => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isOpen, setIsOpen] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
+  const [_scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (isOpen) {
-        const currentScroll = window.scrollY;
-
-        document.body.style.overflow = "hidden";
-        document.body.style.position = "fixed";
-        document.body.style.top = `-${currentScroll}px`;
-        document.body.style.width = "100%";
-      } else {
-        const scrollY = document.body.style.top;
-        document.body.style.overflow = "";
-        document.body.style.position = "";
-        document.body.style.top = "";
-        document.body.style.width = "";
-
-        if (scrollY) {
-          window.scrollTo(0, Number.parseInt(scrollY || "0") * -1);
-        }
-      }
+      setScrollY(window.scrollY);
     };
+
+    window.addEventListener("scroll", handleScroll);
+
+    if (isOpen) {
+      const currentScroll = window.scrollY;
+
+      document.body.style.overflow = "hidden";
+
+      document.body.style.position = "fixed";
+      document.body.style.top = `-${currentScroll}px`;
+      document.body.style.width = "100%";
+    } else {
+      const scrollY = document.body.style.top;
+      document.body.style.overflow = "";
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
+
+      if (scrollY) {
+        window.scrollTo(0, Number.parseInt(scrollY || "0") * -1);
+      }
+    }
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -342,6 +348,7 @@ const NavMenu = () => {
                         </motion.button>
                       </motion.div>
 
+                      {/* Logo aligned with content above - Made larger */}
                       <motion.div variants={itemVariants} className="pt-8">
                         <motion.div
                           initial={{ opacity: 1 }}
