@@ -1,6 +1,6 @@
 # Digital Creative Studio Website
 
-This is a modern, responsive website for a digital creative studio, built with **Next.js 14**, **Tailwind CSS**, **Framer Motion**, and **TypeScript**.
+This is a modern, responsive website for a digital creative studio, built with **Next.js 14**, **Tailwind CSS**, **Framer Motion**, **GSAP** and **TypeScript**.
 
 ## 🚀 Getting Started
 
