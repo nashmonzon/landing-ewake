@@ -7,8 +7,8 @@ This is a modern, responsive website for a digital creative studio, built with *
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone git@github.com:nashmonzon/landing-ewake.git
+cd landing-ewake
 ```
 
 ### 2. Install dependencies
