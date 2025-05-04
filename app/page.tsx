@@ -1,13 +1,14 @@
-import BrandCarousel from "@/components/BrandCarousel";
-import Certificazioni from "@/components/Certificazioni";
+import BrandCarousel from "@/components/home/BrandCarousel";
+import Certificazioni from "@/components/home/Certificazioni";
 import CTA from "@/components/CTA";
-import Hero from "@/components/Hero";
-import NostriServizi from "@/components/NostriServizi";
-import Projects from "@/components/Projects";
-import SettoriDiCompetenza from "@/components/Settori";
-import { SiamoFattiCosi } from "@/components/SiamoFattiCosi";
-import TenYears from "@/components/TenYears";
-import TextCarousel from "@/components/TextCarousel";
+import Hero from "@/components/home/Hero";
+
+import Projects from "@/components/home/Projects";
+import SettoriDiCompetenza from "@/components/home/Settori";
+import { SiamoFattiCosi } from "@/components/home/SiamoFattiCosi";
+import TenYears from "@/components/home/TenYears";
+import TextCarousel from "@/components/home/TextCarousel";
+import NostriServizi from "@/components/home/NostriServizi";
 
 export default function HomePage() {
   return (
@@ -21,7 +22,11 @@ export default function HomePage() {
       <BrandCarousel />
       <Certificazioni />
       <NostriServizi />
-      <CTA />
+      <CTA>
+        <h2 className="text-4xl sm:text-6xl font-light whitespace-nowrap">
+          Vogliamo <span className="font-bold">iniziare?</span>
+        </h2>
+      </CTA>
     </main>
   );
 }
